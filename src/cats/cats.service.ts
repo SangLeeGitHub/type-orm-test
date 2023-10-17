@@ -16,6 +16,10 @@ export class CatsService {
     return await this.catRepository.save(createCatDto);
   }
 
+  async findAll() {
+    return await this.catRepository.find();
+  }
+
   async findOne(id: number) {
     return await this.catRepository.findOne({where: {id}});
   }
